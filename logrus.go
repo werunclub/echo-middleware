@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"io"
 	"fmt"
+	"io"
 	"net/http"
 	"time"
 
@@ -112,6 +112,7 @@ func Logrus(log *logrus.Logger) echo.MiddlewareFunc {
 			}
 
 			entry.Debug("start handling request")
+			ctx.Set("logger", *entry)
 
 			if err := next(ctx); err != nil {
 				ctx.Error(err)
