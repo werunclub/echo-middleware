@@ -123,7 +123,7 @@ func Logrus(log *logrus.Logger) echo.MiddlewareFunc {
 			entry.WithFields(logrus.Fields{
 				"status":      ctx.Response().Status,
 				"text_status": http.StatusText(ctx.Response().Status),
-				"took":        latency,
+				"took":        latency.Seconds(),
 				fmt.Sprintf("measure#%s.latency", "web"): latency.Nanoseconds(),
 			}).Info("completed handling request")
 
