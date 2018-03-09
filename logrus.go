@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/labstack/echo"
 	"github.com/labstack/gommon/log"
+	"github.com/sirupsen/logrus"
 )
 
 const x_request_id = "X-Request-Id"
