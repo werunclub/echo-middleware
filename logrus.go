@@ -8,7 +8,7 @@ import (
 
 	"github.com/labstack/echo"
 	"github.com/labstack/gommon/log"
-	"github.com/sirupsen/logrus"
+	"github.com/Sirupsen/logrus"
 )
 
 const x_request_id = "X-Request-Id"
